@@ -1,0 +1,6 @@
+{
+    "dbUrl": "mongodb+srv://devSujan123:createuser@cluster0-hhbxg.mongodb.net/Blog?retryWrites=true&w=majority",
+    "PORT": "3001",
+    "NODE_ENV": "development",
+    "secretOrKey": "SujanDaiRocks"
+}

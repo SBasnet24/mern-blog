@@ -1,5 +1,6 @@
 const express = require("express");
 const passport = require("passport");
+const upload = require("../utils/multer");
 const validatePostInput = require("../validation/validatePostInput");
 const {
   createPost,
@@ -14,7 +15,6 @@ const {
   sortByCategory,
   getPostBySlug,
 } = require("../controllers/postController");
-const upload = require("../utils/multer");
 const router = express.Router();
 
 router

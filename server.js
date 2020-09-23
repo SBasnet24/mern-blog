@@ -4,6 +4,6 @@ const config = require("./config.json");
 // connect to the database
 dbConnect();
 const PORT = process.env.PORT || config.PORT;
-app.listen(config.PORT, () => {
-  console.log(`App is running on port 3001`);
+app.listen(PORT, () => {
+  console.log(`App is running on port ${PORT}`);
 });

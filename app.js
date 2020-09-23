@@ -19,7 +19,11 @@ app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(passport.initialize());
 require("./utils/passport")(passport);
-
+app.get("/", (req, res) => {
+  res.json({
+    route: "/api/posts",
+  });
+});
 app.use("/api/auth", authRouter);
 app.use("/api/posts", postRouter);
 app.use("/api/users", userRouter);

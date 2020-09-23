@@ -1,5 +1,5 @@
 const catchAsync = require("../utils/catchAsync");
-const AppError = require("../utils/AppError");
+const AppError = require("../utils/appError");
 const Post = require("../models/postModel");
 const User = require("../models/userModel");
 const { Category } = require("../models/categoryModel");

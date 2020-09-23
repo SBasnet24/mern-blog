@@ -26,6 +26,7 @@ const POST_FORM = (history) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     const response = await addPost(title, body, description, category, image);
+    // console.log(response);
     if (!_.isEmpty(response)) {
       if (response.data.status === "success") window.location.assign("/");
     }

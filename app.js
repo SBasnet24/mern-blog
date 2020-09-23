@@ -24,6 +24,7 @@ app.get("/", (req, res) => {
     route: "/api/posts",
   });
 });
+
 app.use("/api/auth", authRouter);
 app.use("/api/posts", postRouter);
 app.use("/api/users", userRouter);
@@ -32,15 +33,5 @@ app.all("*", (req, res, next) => {
   next(new AppError(`Cannot find ${req.originalUrl} on this server`, 404));
 });
 app.use(globalErrorHandler);
-
-// Serve static assets if in production
-// if (process.env.NODE_ENV === "production") {
-// Set static folder
-app.use(express.static("client/build"));
-
-app.use("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
-// }
 
 module.exports = app;
